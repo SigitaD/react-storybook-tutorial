@@ -1,0 +1,18 @@
+.input {
+  border: 2px solid seagreen;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color: gainsboro;
+}
+
+.small {
+  width: 10rem;
+}
+
+.medium {
+  width: 15rem;
+}
+
+.large {
+  width: 20rem;
+}
