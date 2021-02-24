@@ -29,7 +29,10 @@ Danger.args = {
 
 export const Log = () => (
   // eslint-disable-next-line no-console
-  <Button variantColor="blue" onClick={() => console.log("console")}>
+  <Button
+    variantColor="blue"
+    onClick={() => console.log("console", process.env.STORYBOOK_THEME)}
+  >
     Log
   </Button>
 );
