@@ -5,10 +5,11 @@ import Input from "./Input";
 export default {
   title: "Form/Input",
   component: Input,
+  argTypes: {
+    size: { control: "select" },
+  },
 };
 
-export const Small = () => <Input size="small" />;
+const Template = (args) => <Input {...args} />;
 
-export const Medium = () => <Input size="medium" />;
-
-export const Large = () => <Input size="large" />;
+export const InputField = Template.bind({});

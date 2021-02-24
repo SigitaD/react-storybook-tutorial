@@ -16,7 +16,7 @@ function Input(props) {
 }
 
 Input.propTypes = {
-  size: PropTypes.string,
+  size: PropTypes.oneOf(["small", "medium", "large"]),
 };
 
 export default Input;
