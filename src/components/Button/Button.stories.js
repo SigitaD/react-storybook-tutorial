@@ -5,12 +5,39 @@ import Button from "./Button";
 export default {
   title: "Form/Button",
   component: Button,
+  args: {
+    children: "Primary children at a component level",
+  },
 };
 
-export const Primary = () => <Button variant="primary">Primary</Button>;
+const Template = (args) => <Button {...args} />;
 
-export const Secondary = () => <Button variant="secondary">Secondary</Button>;
+export const Primary = Template.bind({});
+Primary.args = {
+  variant: "primary",
+  //   children: "Primary",
+};
 
-export const Success = () => <Button variant="success">Success</Button>;
+export const PrimaryArgsReused = Template.bind({});
+PrimaryArgsReused.args = {
+  ...Primary.args,
+  children: "Other children prop",
+};
 
-export const Danger = () => <Button variant="danger">Danger</Button>;
+export const Secondary = Template.bind({});
+Secondary.args = {
+  variant: "secondary",
+  children: "Secondary",
+};
+
+export const Success = Template.bind({});
+Success.args = {
+  variant: "success",
+  children: "Success",
+};
+
+export const Danger = Template.bind({});
+Danger.args = {
+  variant: "danger",
+  children: "Danger",
+};
