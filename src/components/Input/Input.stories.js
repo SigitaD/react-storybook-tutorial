@@ -14,3 +14,5 @@ export default {
 const Template = (args) => <Input {...args} />;
 
 export const InputField = Template.bind({});
+
+InputField.storyName = "Renamed Input";
