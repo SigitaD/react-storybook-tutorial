@@ -5,6 +5,7 @@ import { Button } from "@chakra-ui/core";
 export default {
   title: "Chakra/Button",
   component: Button,
+
   argTypes: {
     backgroundColor: { control: "color" },
     onClick: { action: "clicked" },
