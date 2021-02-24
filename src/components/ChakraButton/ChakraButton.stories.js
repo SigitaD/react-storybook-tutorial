@@ -25,3 +25,10 @@ Danger.args = {
   variantColor: "red",
   children: "Danger",
 };
+
+export const Log = () => (
+  // eslint-disable-next-line no-console
+  <Button variantColor="blue" onClick={() => console.log("console")}>
+    Log
+  </Button>
+);
