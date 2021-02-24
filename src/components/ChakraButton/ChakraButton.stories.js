@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@chakra-ui/core";
+import { text, boolean } from "@storybook/addon-knobs";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -30,5 +31,11 @@ export const Log = () => (
   // eslint-disable-next-line no-console
   <Button variantColor="blue" onClick={() => console.log("console")}>
     Log
+  </Button>
+);
+
+export const Knobs = () => (
+  <Button variantColor="purple" disabled={boolean("Disabled", false)}>
+    {text("Label", "Button Label")}
   </Button>
 );
